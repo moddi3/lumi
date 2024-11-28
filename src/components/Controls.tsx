@@ -17,7 +17,7 @@ export const Controls: React.FC = () => {
   return (
     <div className="p-4 border-t border-gray-200">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col px-4 gap-4">
           <div className="flex items-center gap-2">
             <Monitor size={20} />
             <select

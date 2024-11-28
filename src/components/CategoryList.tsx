@@ -19,7 +19,7 @@ const categoryNames = {
 };
 
 export const CategoryList: React.FC = () => {
-  const { currentCategory, setCategory } = useVideoStore();
+  const { currentCategory, setCategory, setCurrentVideo } = useVideoStore();
 
   return (
     <div className="flex flex-col gap-2 p-4">
@@ -28,7 +28,10 @@ export const CategoryList: React.FC = () => {
         return (
           <button
             key={category}
-            onClick={() => setCategory(category)}
+            onClick={() => {
+              setCategory(category);
+              setCurrentVideo(null)
+            }}
             className={clsx(
               'flex items-center gap-3 px-4 py-3 rounded-lg transition-colors',
               currentCategory === category

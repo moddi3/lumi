@@ -11,7 +11,7 @@ interface VideoStore {
   isMuted: boolean;
   quality: string;
   sleepTimer: number | null;
-  setCurrentVideo: (video: Video) => void;
+  setCurrentVideo: (video: Video | null) => void;
   setCategory: (category: Category | null) => void;
   toggleFullscreen: () => void;
   toggleMute: () => void;
